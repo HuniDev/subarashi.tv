@@ -1,0 +1,19 @@
+.sitehead_title {
+	text-shadow: 4px 4px 5px white;
+	color: white;
+	border-color: black;
+	border-radius: 20px;
+	letter-spacing: 1.5px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+}
+
+.sitehead_hero {
+	background-color: rgba(0, 0, 0, 0.4);
+	background-image: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 0.8),
+		rgba(0, 0, 0, 0) 60%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
+}
