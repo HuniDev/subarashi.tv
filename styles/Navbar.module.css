@@ -1,0 +1,9 @@
+.sitehead_title {
+	text-shadow: 4px 4px 5px grey;
+	color: white;
+	border-color: black;
+	border-radius: 20px;
+	letter-spacing: 1.5px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: white;
+}

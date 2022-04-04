@@ -1,13 +1,5 @@
 import styles from '../styles/Sitehead.module.css';
-import {
-	Box,
-	Link,
-	Flex,
-	Heading,
-	Center,
-	Input,
-	Image,
-} from '@chakra-ui/react';
+import { Box, Button, Center, Input, Image, Heading } from '@chakra-ui/react';
 
 function Sitehead() {
 	return (
@@ -21,38 +13,22 @@ function Sitehead() {
 				className={styles.sitehead_hero}
 			/>
 
-			<Box
-				position='absolute'
-				display='flex'
-				justifyContent='center'
-				alignContent='center'
-				w='inherit'
-			>
-				<Box>
-					<Center>
-						<Flex gap='60px'>
-							<Link>Link</Link>
-							<Link>Link</Link>
-							<Link>Link</Link>
-							<Link>Link</Link>
-						</Flex>
-					</Center>
-					<Center>
-						<Heading className={styles.sitehead_title} mt='30px'>
-							Subarashi.tv
-						</Heading>
-					</Center>
-					<Center>
-						<Input
-							placeholder='Search'
-							size='sm'
-							w='200px'
-							mt='40px'
-							borderRadius='10px'
-							bg='white'
-						/>
-					</Center>
-				</Box>
+			<Box position='absolute' display='flex' flexWrap='wrap' w='650px'>
+				<Center>
+					<Heading size='2xl' mt='30px' ml='30px' color='#001219'>
+						Demon Slayer: Entertainment District
+					</Heading>
+				</Center>
+
+				<Button
+					size='lg'
+					bg='#ae2012'
+					mt='30px'
+					ml='30px'
+					_hover={{ background: '#ca6702' }}
+				>
+					Watch Now
+				</Button>
 			</Box>
 		</Box>
 	);

@@ -1,15 +1,15 @@
 import { Box, Heading, Image, Center } from '@chakra-ui/react';
-import styles from '../styles/Poster.module.css';
+import styles from '../styles/Feature.module.css';
 
-function Poster(animes) {
+function Feature(animes) {
 	return (
 		<Box>
 			<Box
 				display='flex'
 				flexDirection='column'
 				bg='gray.300'
-				w='190px'
-				h='250px'
+				w='300px'
+				h='150px'
 				borderRadius='20px'
 				boxShadow='base'
 				mt='5'
@@ -18,8 +18,8 @@ function Poster(animes) {
 				<Image
 					src={animes?.cover_image}
 					alt={animes?.banner_image}
-					boxSize='250'
-					objectFit='fill'
+					boxSize='350'
+					objectFit='cover'
 					borderRadius='10'
 				/>
 				<Box
@@ -50,4 +50,4 @@ function Poster(animes) {
 	);
 }
 
-export default Poster;
+export default Feature;
