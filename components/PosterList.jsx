@@ -5,6 +5,7 @@ const PosterList = ({ animes }) => {
 		return (
 			<Poster
 				key={anime.mal_id}
+				id={anime.id}
 				titles={anime.titles}
 				cover_image={anime.cover_image}
 			/>

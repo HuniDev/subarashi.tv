@@ -20,6 +20,7 @@ function navbar() {
 			</Center>
 			<Input
 				placeholder='Search'
+				_placeholder={{ color: 'black' }}
 				size='sm'
 				w='200px'
 				mt='20px'

@@ -8,11 +8,7 @@ import { AnimateSharedLayout } from 'framer-motion';
 import PosterList from '../components/PosterList';
 import FeatureList from '../components/FeatureList';
 
-export default function Home({
-	trendingAnimes,
-	upcomingAnimes,
-	popularAnimes,
-}) {
+export default function Home({ trendingAnimes, upcomingAnimes }) {
 	return (
 		<Layout>
 			<Navbar />
@@ -45,9 +41,6 @@ export const getStaticProps = async () => {
 			fetch(
 				'https://api.aniapi.com/v1/anime?year=2022&status=not_yet_released&per_page=15&page=1'
 			),
-			fetch(
-				'https://api.aniapi.com/v1/anime?formats=0&score=>85&per_page=10&page=1'
-			),
 		],
 		{
 			method: 'Get',
@@ -59,16 +52,14 @@ export const getStaticProps = async () => {
 
 	const res1 = await res[0].json();
 	const res2 = await res[1].json();
-	const res3 = await res[2].json();
+
 	const trendingAnimes = res1.data.documents;
 	const upcomingAnimes = res2.data.documents;
-	const popularAnimes = res3.data.documents;
 
 	return {
 		props: {
 			trendingAnimes,
 			upcomingAnimes,
-			popularAnimes,
 		},
 	};
 };
