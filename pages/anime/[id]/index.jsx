@@ -1,11 +1,14 @@
-const Anime = ({ animes }) => {
-	const curAnime = animes.find(item => item.id === );
-	return  (
-	 <div>
-		 Title Placeholder
-		 </div>
-	)
-	};
+import DetailPage from '../../../components/DetailPage';
+
+function Anime({ animes, params }) {
+	const animeDetails = animes.map(anime => {
+		if (anime.id == params.id) {
+			return <DetailPage key={anime.anilist_id} anime={anime} />;
+		}
+	});
+
+	return <div>{animeDetails}</div>;
+}
 
 export async function getStaticProps({ params }) {
 	const res = await Promise.all(
@@ -31,7 +34,7 @@ export async function getStaticProps({ params }) {
 	const animes = [...trendingAnimes, ...upcomingAnimes];
 
 	return {
-		props: { animes },
+		props: { animes, params },
 	};
 }
 
