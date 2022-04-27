@@ -1,1 +1,1 @@
-Anime viewing site built with React and Next.js
+Anime viewing site built with React, Next.js, and Chakra-UI
